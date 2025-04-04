@@ -10,9 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var secondDiceImageView: UIImageView!
+    @IBOutlet weak var firstDiceImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        firstDiceImageView.image = UIImage(named: "DiceSix")
+        secondDiceImageView.image = UIImage(named: "DiceTwo")
     }
 
 
