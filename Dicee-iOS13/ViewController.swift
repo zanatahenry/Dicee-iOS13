@@ -19,6 +19,25 @@ class ViewController: UIViewController {
         secondDiceImageView.image = UIImage(named: "DiceTwo")
     }
 
-
+    @IBAction func rollButton(_ sender: UIButton) {
+        let images = [
+            "DiceOne",
+            "DiceTwo",
+            "DiceThree",
+            "DiceFour",
+            "DiceFive",
+            "DiceSix"
+        ]
+        
+        let diceOneFile = images[Int.random(in: 0..<6)]
+        let diceTwoFile = images[Int.random(in: 0..<6)]
+        
+        let diceOneImage = UIImage(named: diceOneFile)
+        let diceTwoImage = UIImage(named: diceTwoFile)
+        
+        firstDiceImageView.image = diceOneImage
+        secondDiceImageView.image = diceTwoImage
+    }
+    
 }
 
